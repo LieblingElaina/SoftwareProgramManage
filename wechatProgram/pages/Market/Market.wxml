@@ -1,0 +1,69 @@
+<view class="container">
+    <button bindtap="navigateToLogin">跳转到登录界面</button>
+    <view class="section-title">今日板块</view>
+    <scroll-view class="scroll-view" scroll-x="true" enhanced="true" show-scrollbar="false">
+        <view class="board-container">
+            <view class="board-item">
+                <view class="board-name">佰维存储</view>
+                <view class="board-value up">+20.01%</view>
+            </view>
+            <view class="board-item">
+                <view class="board-name">苏交科</view>
+                <view class="board-value up">+19.95%</view>
+            </view>
+            <view class="board-item">
+                <view class="board-name">隆基绿能</view>
+                <view class="board-value down">-7.13%</view>
+            </view>
+            <view class="board-item">
+                <view class="board-name">比亚迪</view>
+                <view class="board-value up">+1.05%</view>
+            </view>
+            <view class="board-item">
+                <view class="board-name">贵州茅台</view>
+                <view class="board-value down">-9.87%</view>
+            </view>
+            <view class="board-item">
+                <view class="board-name">宁德世代</view>
+                <view class="board-value up">+0.33%</view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <view class="header">股票排行</view>
+
+    <view class="tabs">
+        <view 
+            wx:for="{{tabs}}" 
+            wx:key="index"
+            class="tab-item {{activeTab === index ? 'active' : ''}}"
+            bindtap="switchTab"
+            data-index="{{index}}"
+        >
+            {{item}}
+        </view>
+    </view>
+
+    <view class="table">
+        <view class="table-header">
+            <view class="header-item">股票名称</view>
+            <view class="header-item">最新价</view>
+            <view class="header-item">涨跌幅</view>
+            <view class="header-item">涨速</view>
+        </view>
+        
+        <view class="table-row" wx:for="{{currentData}}" wx:key="id">
+            <view class="row-item">
+                {{item.name}}
+                <view class="stock-code">{{item.code}}</view>
+            </view>
+            <view class="row-item">{{item.price}}</view>
+            <view class="row-item {{item.change > 0 ? 'up' : 'down'}}">
+                {{item.change > 0 ? '+' : ''}}{{item.change}}%
+            </view>
+            <view class="row-item {{item.speed > 0 ? 'up' : item.speed < 0 ? 'down' : ''}}">
+                {{item.speed > 0 ? '+' : ''}}{{item.speed}}%
+            </view>
+        </view>
+    </view>
+</view>    

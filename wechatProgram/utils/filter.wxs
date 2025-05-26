@@ -1,0 +1,11 @@
+function formatNumber(num, decimals) {
+    num = num || 0;
+    decimals = decimals || 2;
+    var factor = Math.pow(10, decimals);
+    var rounded = Math.round(num * factor) / factor;
+    return rounded.toFixed(decimals);
+  }
+  
+  module.exports = {
+    formatNumber: formatNumber
+  };

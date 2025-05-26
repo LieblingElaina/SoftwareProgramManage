@@ -1,0 +1,10 @@
+.date-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.date {
+    font-size: 15px;
+    color: #333;
+}

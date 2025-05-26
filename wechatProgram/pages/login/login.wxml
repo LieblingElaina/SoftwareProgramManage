@@ -1,0 +1,11 @@
+<view class="container">
+    <view class="form-item">
+        <label>手机号</label>
+        <input type="number" placeholder="请输入手机号" bindinput="handlePhoneInput" class="input-field" />
+    </view>
+    <view class="form-item">
+        <label>验证码</label>
+        <input type="number" placeholder="请输入验证码" bindinput="handleCodeInput" class="input-field" />
+    </view>
+    <button formType="submit" bindtap="handleLogin" class="{{canLogin? 'login-button-enabled' : 'login-button-disabled'}}">登录</button>
+</view>    

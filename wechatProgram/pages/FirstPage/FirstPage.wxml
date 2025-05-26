@@ -1,0 +1,4 @@
+<!--pages/table2/table2.wxml-->
+<view class="container">
+    <view class="date">{{currentDate.year}}年{{currentDate.month}}月{{currentDate.day}}日 {{currentDate.week}}</view>
+</view>    

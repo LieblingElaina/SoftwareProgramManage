@@ -1,0 +1,290 @@
+
+
+.stock-info {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  .stock-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .stock-price {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .news-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .news-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .news-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  
+  .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+  }
+  
+  .stock-header {
+    padding: 12px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+  }
+  
+  .stock-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #333;
+  }
+  
+  .basic-data-row {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+    margin: 0 auto;
+  }
+  
+  .price {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 6px 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .up {
+    color: #f75353;
+  }
+  
+  .down {
+    color: #4caf50;
+  }
+  
+  .change-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+  }
+  
+  .change-info text {
+    margin: 0 6px; 
+    font-size: 13px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .up {
+    color: #f56c6c;
+  }
+  
+  .down {
+    color: #67c23a;
+  }
+  
+  .change-info text {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .main-data {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .basic-data view {
+    margin-bottom: 8px;
+  }
+  
+  .chart-container {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .chart-image {
+    width: 100%;
+  }
+  
+  .chart-tabs {
+    display: flex;
+    margin-top: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #eee;
+  }
+  
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #666;
+    background-color: #f9f9f9;
+  }
+  
+  .tab.active {
+    color: #1989fa;
+    font-weight: bold;
+    background-color: #fff;
+  }
+  
+  .order-book {
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buy-section, .sell-section {
+    margin-bottom: 15px;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .order-rows {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .bid {
+    color: #f75353;
+    width: 100%;
+    padding: 3px 0;
+  }
+  
+  .ask {
+    color: #4caf50;
+    width: 100%;
+    padding: 3px 0;
+  }
+  
+  .news-list {
+    background-color: #fff;
+    flex: 1;
+    margin-bottom: 60px;
+  }
+  
+  .news-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+  .news-title {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .news-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .news-time, .news-source {
+    font-size: 12px;
+    color: #999;
+  }
+  .tab-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+  }
+  .tab-item image {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+  .tab-item.active {
+    color: #1989fa;
+  }
+
+ /* 底部导航栏 - 文字按钮版 */
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90rpx;
+    display: flex;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    padding: 0;
+    z-index: 999;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32rpx;
+    font-weight: 500;
+  }
+  
+  .trade-btn {
+    background: #fff;
+    color: #333;
+    border-right: 1px solid #f0f0f0;
+  }
+  
+  .share-btn {
+    background: #ff6a00;
+    color: #fff;
+  }
+  
+  .tab-btn:active {
+    opacity: 0.8;
+  }
+
+  

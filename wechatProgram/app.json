@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/FirstPage/FirstPage",
+    "pages/Optional/Optional",
+    "pages/Market/Market",
+    "pages/Trade/Trade",
+    "pages/Contest/Contest",
+    "pages/login/login",
+    "pages/Detail/Detail",
+    "pages/newsDetail/newsDetail"
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff0000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "custom": false,
+    "list": [
+      {
+        "pagePath": "pages/FirstPage/FirstPage",
+        "text": "首页",
+        "iconPath": "picture/1-1.png",
+        "selectedIconPath": "picture/1.png"
+      },
+      {
+        "pagePath": "pages/Optional/Optional",
+        "text": "自选",
+        "iconPath": "picture/2-1.png",
+        "selectedIconPath": "picture/2.png"
+      },
+      {
+        "pagePath": "pages/Market/Market",
+        "text": "行情",
+        "iconPath": "picture/3-1.png",
+        "selectedIconPath": "picture/3.png"
+      },
+      {
+        "pagePath": "pages/Trade/Trade",
+        "text": "交易",
+        "iconPath": "picture/4-1.png",
+        "selectedIconPath": "picture/4.png"
+      },
+      {
+        "pagePath": "pages/Contest/Contest",
+        "text": "大赛",
+        "iconPath": "picture/5-1.png",
+        "selectedIconPath": "picture/5.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "同花顺模拟炒股",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "enableShareAppMessage": true,
+  "enableShareTimeline": true 
+}
+
+  
