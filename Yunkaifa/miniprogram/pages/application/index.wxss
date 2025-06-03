@@ -1,0 +1,35 @@
+.container {
+    padding: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-group text {
+    width: 100px;
+  }
+  
+  input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #07c160;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }

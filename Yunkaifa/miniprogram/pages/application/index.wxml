@@ -1,0 +1,23 @@
+<view class="container">
+  <text>OpenID: {{openid}}</text>
+  <text>SessionKey: {{session_key}}</text>
+</view>
+
+<view class="container">
+  <view class="input-group">
+    <text>第一个数字：</text>
+    <input type="digit" bindinput="onNum1Input" placeholder="请输入数字" />
+  </view>
+  
+  <view class="input-group">
+    <text>第二个数字：</text>
+    <input type="digit" bindinput="onNum2Input" placeholder="请输入数字" />
+  </view>
+  
+  <button bindtap="calculate">计算</button>
+  
+  <view class="result" wx:if="{{result !== null}}">
+    <text>计算结果：</text>
+    <text>{{result.success ? result.result : result.message}}</text>
+  </view>
+</view>
