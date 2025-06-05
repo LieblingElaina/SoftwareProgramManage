@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="input-box">
+    <label>手机号</label>
+    <input type="number" placeholder="请输入手机号" bindinput="handlePhoneInput" value="{{phoneNumber}}" />
+  </view>
+  <button type="primary" disabled="{{!isBtnEnable}}" bindtap="handleLogin">登录</button>
+</view>

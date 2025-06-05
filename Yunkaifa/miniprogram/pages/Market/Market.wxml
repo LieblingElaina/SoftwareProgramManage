@@ -1,0 +1,15 @@
+<view class="header">
+  <block wx:if="{{loginStatus === 0}}">
+    <button bindtap="goToLogin">登录</button>
+  </block>
+  <block wx:else>
+    <image src="{{avatarUrl}}" bindtap="showActionSheet" class="avatar" />
+  </block>
+</view>
+<view class="content">
+  <!-- 行情页其他内容 -->
+</view>
+<action-sheet hidden="{{!showAction}}" bindclose="hideActionSheet">
+  <action-sheet-item bindtap="switchPhone">切换手机号</action-sheet-item>
+  <action-sheet-item bindtap="handleLogout">退出登录</action-sheet-item>
+</action-sheet>

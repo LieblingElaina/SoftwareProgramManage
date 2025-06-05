@@ -16,7 +16,9 @@
     "pages/cloudbaseModuleInstallTips/index",
     "pages/cloudbaseModuleGuide/index",
     "pages/business/index",
-    "pages/application/index"
+    "pages/application/index",
+    "pages/Market/Market",
+    "pages/login/login"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -54,6 +56,12 @@
       {
         "pagePath": "pages/application/index",
         "text": "应用",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/Market/Market",
+        "text": "行情",
         "iconPath": "images/icons/home.png",
         "selectedIconPath": "images/icons/home-active.png"
       }
