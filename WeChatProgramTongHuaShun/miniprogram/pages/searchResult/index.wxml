@@ -1,0 +1,27 @@
+<view class="search-header">
+  <input class="search-input" placeholder="输入股票名称或代码搜索" value="{{searchValue}}" bindinput="updateSearchValue" />
+  <button bindtap="getSearch1">搜索</button>
+</view>
+
+<view class="text">
+  <view style="width: 350rpx; position: relative; left: 37rpx; top: 0rpx">股票名称</view>
+  <view style="width: 175rpx; text-align: center;">最新价</view>
+  <view style="width: 175rpx; text-align: center;">涨跌幅</view>
+</view>
+
+<view class="list-container">
+  <view wx:for="{{searchResults}}" wx:key="unique" class="list-item">
+    <view>{{item.name}} ({{item.code}})</view>
+    <view>当前价: {{item.newPrice}}</view>
+    <view>涨跌幅: {{item.gain}}</view>
+  </view>
+  <!-- 搜索结果，应用相同的列表样式 -->
+  <navigator url="../body/index?id={{item.code > 600000 ?'sh':'sz'}}{{item.code}}" class="list" wx:for="{{searchList}}" wx:key="index">
+    <view class="top">
+      <view>{{item.name}}</view>
+      <view class="mini" style="font-size: 12px; color: grey;">{{item.code}}</view>
+    </view>
+    <view style="width: 170rpx; color: {{item.gain < 0 ? 'green' : 'red'}}; text-align: center; font-weight: 700;">{{item.newPrice}}</view>
+    <view style="width: 170rpx; color: {{item.gain < 0 ? 'green' : 'red'}}; text-align: center; font-weight: 700;">{{item.gain > 0 ? '+' + item.gain : item.gain}}%</view>
+  </navigator>
+</view>

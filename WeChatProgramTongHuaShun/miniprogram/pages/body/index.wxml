@@ -1,0 +1,173 @@
+<wxs module="format" src="./index.wxs"></wxs>
+<view class="box">
+  <view>
+    <view class="bigtext">{{list.nowPri}}</view>
+    <view class="xbox">
+      <view class="xtext">{{list.increase}}</view>
+      <view class="xtext">{{list.increPer+'%'}}</view>
+    </view>
+  </view>
+  <view class="text">
+    <view>高<text class="text1">{{list.todayMax}}</text></view>
+    <view>低<text class="text2">{{list.todayMin}}</text></view>
+  </view>
+  <view class="text">
+    <view>开<text class="text3">{{list.todayStartPri}}</text></view>
+    <view>换<text class="text4">{{list.todayStartPri}}</text></view>
+  </view>
+  <view class="text">
+    <view>量<text class="text4">{{format.roundToTwoDecimalPlaces(list.traNumber)}}万</text></view>
+    <view>额<text class="text4">{{format.roundToTwoDecimalPlaces(list.traAmount)}}万</text></view>
+  </view>
+</view>
+<view class="main-container">
+  <van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="分时">
+      <image src="{{gif.minurl}}" style="width: 100%; " />
+    </van-tab>
+    <van-tab title="日K">
+      <image src="{{gif.dayurl}}" style="width: 100%; " />
+    </van-tab>
+    <van-tab title="周K">
+      <image src="{{gif.weekurl}}" style="width: 100%; " />
+    </van-tab>
+    <van-tab title="月K">
+      <image src="{{gif.monthurl}}" style="width: 100%; " />
+    </van-tab>
+  </van-tabs>
+  <!--  -->
+  <view class="bodybox">
+
+    <view class="up_box">
+      <view>
+        <view>卖号</view>
+        <view>卖价</view>
+        <view style="color: red;font-weight: 700;">报价</view>
+      </view>
+      <view>
+        <view>卖1</view>
+        <view>{{list.sellOne}}</view>
+        <view style="color: red;font-weight: 700;">{{list.sellOnePri}}</view>
+      </view>
+      <view>
+        <view>卖2</view>
+        <view>{{list.sellTwo}}</view>
+        <view style="color: red;font-weight: 700;">{{list.sellTwoPri}}</view>
+      </view>
+      <view>
+        <view>卖3</view>
+        <view>{{list.sellThree}}</view>
+        <view style="color: red;font-weight: 700;">{{list.sellThreePri}}</view>
+      </view>
+      <view>
+        <view>卖4</view>
+        <view>{{list.sellFour}}</view>
+        <view style="color: red;font-weight: 700;">{{list.sellFourPri}}</view>
+      </view>
+      <view>
+        <view>卖5</view>
+        <view>{{list.sellFive}}</view>
+        <view style="color: red;font-weight: 700;">{{list.sellFivePri}}</view>
+      </view>
+    </view>
+    <view class="down_box">
+      <view>
+        <view>买号</view>
+        <view>买价</view>
+        <view style="color: red;font-weight: 700;">报价</view>
+      </view>
+      <view>
+        <view>买1</view>
+        <view>{{list.buyOne}}</view>
+        <view style="color: red;font-weight: 700;">{{list.buyOnePri}}</view>
+      </view>
+      <view>
+        <view>买2</view>
+        <view>{{list.buyTwo}}</view>
+        <view style="color: red;font-weight: 700;">{{list.buyTwoPri}}</view>
+      </view>
+      <view>
+        <view>买3</view>
+        <view>{{list.buyThree}}</view>
+        <view style="color: red;font-weight: 700;">{{list.buyThreePri}}</view>
+      </view>
+      <view>
+        <view>买4</view>
+        <view>{{list.buyFour}}</view>
+        <view style="color: red;font-weight: 700;">{{list.buyFourPri}}</view>
+      </view>
+      <view>
+        <view>买5</view>
+        <view>{{list.buyFive}}</view>
+        <view style="color: red;font-weight: 700;">{{list.buyFivePri}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<van-cell-group inset>
+  <van-cell>
+    <view slot="title">
+      <view style="font-size: 18px; font-weight: 700;">新闻</view>
+    </view>
+  </van-cell>
+
+  <view style="padding-bottom: 100px ;" class="news_box">
+    <!-- <view>
+      <view class="news_text">农业银行超800亿元大红包今日发放！银行ETF（512800）逆市走强，“避风港”属性尽显</view>
+      <view class="bottom_text"><span>新浪基金</span><span></span>11:02</view>
+    </view>
+    <view>
+      <view class="news_text">半导体ETF（512480）冲高回落，机构：多种迹象表明半导体行业周期即将反转</view>
+      <view class="bottom_text"><span>新浪基金</span><span></span>10:54 </view>
+    </view>
+    <view>
+      <view class="news_text">广东大动作!加快智能算力基础设施建设!顶层政策推动,特别国债提供资金活水,信创ETF基金(562030)盘中上探1%</view>
+      <view class="bottom_text"><span>新浪基金</span><span></span>10:43</view>
+    </view>
+    <view>
+      <view class="news_text">地产行情回归！高股息助力，价值ETF（510030）逆市飘红！后市如何看？</view>
+      <view class="bottom_text"><span>新浪基金</span><span></span>09:02</view>
+    </view>
+    <view>
+      <view class="news_text">中东富豪扫货中国股票资产，什么信号？</view>
+      <view class="bottom_text"><span>新浪基金</span><span></span>15:32</view>
+    </view> -->
+
+    
+    <navigator style="padding: 0 32rpx;" url="../web/index?url={{item.url}}" wx:for="{{news}}" wx:key="ctime">
+      <view style="font-size: small; margin-top: 32rpx;">{{item.title}}</view>
+      <view style="display: flex; margin-top: 20rpx; color: gray;">
+        <view style="flex-grow: 1; font-size: 24rpx;">{{item.source}}</view>
+        <view style="font-size: 24rpx;">{{item.time}}</view>
+      </view>
+    </navigator>
+    <view style="margin-top: 32rpx; width: 100%; text-align: center; font-size: small; height: 150rpx;" bind:tap="requestNews">
+      {{hasMoreNews ? '点击加载更多' : '没有更多了'}}
+    </view>
+
+  </view>
+
+
+
+</van-cell-group>
+
+
+<!--  -->
+<view class="btn">
+  <button class="qwe">交易</button>
+  <view class="icon" wx:if="{{show}}" bindtap="showTap1">
+    <image style="width:30px;height: 30px;" src="../../images/icons/收藏-选中.png" />
+    <view style="color: red;">自选</view>
+  </view>
+  <view class="icon" wx:else bindtap="showTap2">
+    <image style="width:30px;height: 30px;" src="../../images/icons/88.png" />
+    <view>自选</view>
+  </view>
+
+  <view class="icon" bind:tap="onClick">
+    <image style="width:30px;height: 30px;" src="../../images/icons/77.png" />
+    <view open-type="share">分享</view>
+  </view>
+</view>
+<van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onSelect" bind:close="onClose" />

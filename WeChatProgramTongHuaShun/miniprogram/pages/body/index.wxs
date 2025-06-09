@@ -1,0 +1,6 @@
+// NumberConverter.wxs
+module.exports = {
+  roundToTwoDecimalPlaces: function(number) {
+    return Math.round(number /10000000*10) / 10;
+  }
+};

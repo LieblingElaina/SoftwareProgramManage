@@ -1,0 +1,207 @@
+.bigbox{
+  margin: 6px 12px;
+}
+.list{
+  display: flex;
+  margin: 10px 10px;
+}
+.text{
+  display: flex;
+  margin: 10px 10px;
+  color: #b9b8b8;
+  font-size: 14px;
+  
+}
+.top2{
+  display: flex;
+  flex-direction:column;
+}
+.top{
+  display: flex;
+  justify-content:space-between;
+  text-align: center;
+}
+.box{
+  width: 32%;
+  background-color: rgb(242,97,23);
+  border-radius: 10px;
+  color: white;
+  height: 15vh;
+}
+.box1{
+  width: 32%;
+  background-color: rgb(8, 138, 4);
+  border-radius: 10px;
+  color: white;
+  height: 15vh;
+}
+.text1{
+  font-size: 12px;
+  margin-top: 10px;
+}
+.text2{
+font-size: 18px;
+}
+.text3{
+  display: flex;
+  justify-content:space-around;
+  font-size: 14px;
+}
+.box11{
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box11>view{
+  width: 300px;
+}
+.box22>view{
+  width: 300px;
+}
+.box22{
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.text222{
+  color: rgb(167, 167, 167);
+}
+
+
+.num{
+  color: orangered;
+}
+.boxtag{
+  width: 80px;
+  color: white;
+  height: 30px;
+  background: orangered;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  border-radius:10px 0 10px 0 ;
+  margin-bottom: 15px;
+}
+.boxx{
+  margin: 0 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(236, 240, 240);
+  display: inline-block;
+  width: 500rpx;
+}
+.date{
+  font-size: 14px;
+  font-weight: 700;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.popo{
+  width: 600rpx;
+  /* height: 30vh; */
+  text-align: center;
+
+}
+.image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.newstext{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 10rpx 0;
+  margin-left: 30rpx;
+  /* font-family: 'Franklin Gothic Medium','Arial Narrow ', Arial, 'sans-serif'; */
+
+}
+
+.neswLow{
+  display: flex;
+
+}
+.news_num{
+  margin: 10rpx 0;
+  margin-left: 30rpx;
+}
+
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}
+.circle-avatar {
+  width: 30px; /* 或其他你想要的大小 */
+  height: 30px; /* 保持宽度和高度一致 */
+  border-radius: 50%; /* 圆形效果 */
+  overflow: hidden; /* 隐藏超出圆形区域的图像部分 */
+}
+
+.news-text{
+  height: 30rpx;
+}
+
+.news-headline{
+  display: flex;
+}
+
+
+.news-item {
+  align-items: center;
+  margin: 4px 0; /* 减小了条目间的外边距 */
+  padding: 4px; /* 调整内边距看看效果 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.news-box {
+  background-color: #eeebe7;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 5px; /* 减小整体内边距 */
+  margin: 5px; /* 减小外边距 */
+}
+
+
+.news_num {
+  font-size: 16px; /* 数字字体大小 */
+  color: red; /* 数字颜色 */
+  margin-right: 12px; /* 数字和文本之间的间距 */
+}
+
+.newstext {
+  font-size: 14px; /* 文本字体大小 */
+  color: #333; /* 文本颜色 */
+  flex: 1; /* 让文本占据剩余空间 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+
+/* 头像样式 */
+.avatar {
+  width: 30px; /* 设置头像宽度 */
+  height: 30px; /* 设置头像高度，保持与宽度一致形成正圆 */
+  border-radius: 50%; /* 圆角半径为50%，生成圆形 */
+  overflow: hidden; /* 隐藏超出圆形区域的部分 */
+}
+
+
+.TitleTime {
+  font-size: 20px; /* 调整字体大小为20像素 */
+  font-weight: bold; /* 设置字体为粗体 */
+}
+

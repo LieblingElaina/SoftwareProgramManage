@@ -1,0 +1,63 @@
+.list {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff; /* Assuming a white background */
+  border: 1px solid #e1e1e1; /* Light grey border */
+  border-radius: 5px; /* Rounded corners for aesthetics */
+}
+
+.text {
+  display: flex;
+  margin: 10px;
+  color: #b9b8b8;
+  font-size: 14px;
+}
+
+.name-box {
+  flex: 1;
+  margin-right: 10px; /* Adds space between name and price */
+}
+
+.mini {
+  color: grey;
+  font-size: 12px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ensures it takes up full width of the container */
+}
+
+.red {
+  color: red; /* For positive gains */
+}
+
+.green {
+  color: green; /* For negative gains */
+}
+.search-trigger {
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* 搜索栏样式 */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f0f0f0; /* 浅灰色背景 */
+  border-radius: 5px; /* 圆角效果 */
+}
+
+.search-bar text {
+  font-size: 14px; /* 字体大小 */
+  color: #333; /* 字体颜色 */
+}

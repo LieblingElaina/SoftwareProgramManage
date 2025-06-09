@@ -1,0 +1,27 @@
+<!-- pages/index/index.wxml -->
+<van-nav-bar title="同花顺模拟炒股" bind:click-left="goToMarketPage">
+</van-nav-bar>
+<view class="container">
+  <view class="header">
+    <text class="title">今日推荐股票</text>
+  </view>
+  <view class="stock-list">
+    <block wx:for="{{recommendedStocks}}" wx:key="index">
+      <view class="stock-item">
+        <text class="stock-name">{{item.name}} (代码: {{item.symbol}})</text>
+        <text>\n</text>
+        <text class="stock-price">当前价格: {{item.price}}元  </text>
+        <text class="stock-details">最高: {{item.high}}元 - 最低: {{item.low}}元  </text>
+        <text class="stock-change">涨幅: {{item.change}}%  </text>
+        <text class="stock-volume">成交量: {{item.volume}}  </text>
+        <view class="stock-reason">
+        <block wx:for="{{item.reason}}" wx:key="idx">
+          <text class="reason-title">{{item.title}}</text>
+          <text class="reason-description">{{item.description}}</text>
+          <text>\n</text>
+        </block>
+      </view>
+      </view>
+    </block>
+  </view>
+</view>

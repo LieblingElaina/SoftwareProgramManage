@@ -1,0 +1,19 @@
+<!-- 页面 WXML -->
+<view class="search-bar">
+  <input style="width: 611rpx; height: 91rpx; display: block; box-sizing: border-box" type="text" placeholder="输入股票名称或代码" value="{{searchValue}}" bindinput="onInput" class="search-input"/>
+  <button bindtap="getSearch1" style="width: 88rpx; height: 88rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
+</view>
+
+<view class="balance">当前资产：￥{{balance}}</view>
+
+<view wx:for="{{filteredStocks}}" wx:key="id" class="stock-item">
+  <text>{{item.name}} ({{item.code}})</text>
+  <text class="price">￥{{item.newPrice}}</text>
+  <button bindtap="buyStock" data-id="{{item.id}}" style="position: relative; left: 74rpx; top: 0rpx">买入</button>
+  <button bindtap="sellStock" data-id="{{item.id}}" style="position: relative; left: 16rpx; top: 0rpx">卖出</button>
+</view>
+<view class="operation-log">
+  <view wx:for="{{operationLogs}}" wx:key="index">
+    <view>{{item.date}}: {{item.type}} {{item.name}} 价格: ¥{{item.amount}}</view>
+  </view>
+</view>

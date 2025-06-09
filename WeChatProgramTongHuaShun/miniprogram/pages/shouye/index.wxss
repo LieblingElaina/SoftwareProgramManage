@@ -1,0 +1,82 @@
+/* pages/index/index.wxss */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.stock-list {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.stock-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.stock-item:last-child {
+  border-bottom: none;
+}
+
+.stock-name,
+.stock-code {
+  font-size: 16px;
+  color: rgb(238, 32, 32);
+  font-weight: bold;
+}
+
+.stock-price,
+.stock-details,
+.stock-change,
+.stock-volume {
+  font-size: 14px;
+  color: #666;
+}
+
+.stock-reason {
+  margin-top: 5px;
+}
+
+.reason-point {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 2px;
+}
+.reason-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.reason-description {
+  font-size: 14px;
+  color: #666;
+}
+.reason-point {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px; /* 增加底部外边距以分隔每个理由 */
+}
+.avatar {
+  width: 50px;  /* 根据需要调整大小 */
+  height: 50px;
+  position: absolute;
+  top: 10px;    /* 根据页面布局调整 */
+  left: 10px;
+  border-radius: 25px; /* 圆形头像 */
+}

@@ -1,0 +1,1 @@
+"D:\Tencent\微信web开发者工具\cli.bat" cloud functions deploy --e lesql-3gylsjx5011b6612 --n quickstartFunctions --r --project "E:\WeChatProjects\ShowGuoPiao" --report_first --report

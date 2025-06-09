@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/hangQing/index",
+    "pages/zhiXuan/index",
+    "pages/body/index",
+    "pages/login/index",
+    "pages/shouye/index",
+    "pages/trade/index",
+    "pages/contest/index",
+    "pages/web/index",
+    "pages/searchResult/index"
+  ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-image": "@vant/weapp/image/index"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "同花顺模拟炒股",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "Ff0000",
+    "list": [
+      {
+        "pagePath": "pages/shouye/index",
+        "text": "首页",
+        "iconPath": "./images/icons/首页1.png",
+        "selectedIconPath": "./images/icons/首页1-1.png"
+      }, 
+      {
+        "pagePath": "pages/hangQing/index",
+        "text": "行情",
+        "iconPath": "./images/icons/行情2.png",
+        "selectedIconPath": "./images/icons/行情2-2.png"
+      },
+      {
+        "pagePath": "pages/zhiXuan/index",
+        "text": "自选",
+        "iconPath": "./images/icons/自选3.png",
+        "selectedIconPath": "./images/icons/自选3-3.png"
+      },
+      {
+        "pagePath": "pages/trade/index",
+        "text": "模拟",
+        "iconPath": "./images/icons/交易4.png",
+        "selectedIconPath": "./images/icons/交易4-4.png"
+      },
+      {
+        "pagePath": "pages/contest/index",
+        "text": "大赛",
+        "iconPath": "./images/icons/大赛5.png",
+        "selectedIconPath": "./images/icons/大赛5-5.png"
+      }
+      
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
