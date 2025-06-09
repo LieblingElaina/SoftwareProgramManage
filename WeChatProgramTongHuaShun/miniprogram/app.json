@@ -5,8 +5,6 @@
     "pages/body/index",
     "pages/login/index",
     "pages/shouye/index",
-    "pages/trade/index",
-    "pages/contest/index",
     "pages/web/index",
     "pages/searchResult/index"
   ],
@@ -54,20 +52,7 @@
         "text": "自选",
         "iconPath": "./images/icons/自选3.png",
         "selectedIconPath": "./images/icons/自选3-3.png"
-      },
-      {
-        "pagePath": "pages/trade/index",
-        "text": "模拟",
-        "iconPath": "./images/icons/交易4.png",
-        "selectedIconPath": "./images/icons/交易4-4.png"
-      },
-      {
-        "pagePath": "pages/contest/index",
-        "text": "大赛",
-        "iconPath": "./images/icons/大赛5.png",
-        "selectedIconPath": "./images/icons/大赛5-5.png"
       }
-      
     ]
   },
   "sitemapLocation": "sitemap.json"
