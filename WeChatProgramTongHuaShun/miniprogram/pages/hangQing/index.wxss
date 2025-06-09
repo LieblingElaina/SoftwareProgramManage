@@ -10,7 +10,6 @@
   margin: 10px 10px;
   color: #b9b8b8;
   font-size: 14px;
-  
 }
 .top2{
   display: flex;
@@ -65,31 +64,24 @@ font-size: 18px;
   text-align: center;
   margin-bottom: 20px;
 }
-.text222{
-  color: rgb(167, 167, 167);
-}
-
-
 .num{
   color: orangered;
 }
 .boxtag{
-  width: 80px;
+  width: 120px;
   color: white;
   height: 30px;
-  background: orangered;
+  background: red;
   text-align: center;
   line-height: 30px;
   font-size: 12px;
-  border-radius:10px 0 10px 0 ;
   margin-bottom: 15px;
 }
 .boxx{
   margin: 0 20px;
-  border-radius: 10px;
   border: 1px solid rgb(236, 240, 240);
   display: inline-block;
-  width: 500rpx;
+  width: 1000rpx;
 }
 .date{
   font-size: 14px;
@@ -105,7 +97,6 @@ font-size: 18px;
   width: 600rpx;
   /* height: 30vh; */
   text-align: center;
-
 }
 .image{
   width: 150rpx;
@@ -120,20 +111,15 @@ font-size: 18px;
   white-space: nowrap;
   margin: 10rpx 0;
   margin-left: 30rpx;
-  /* font-family: 'Franklin Gothic Medium','Arial Narrow ', Arial, 'sans-serif'; */
-
 }
 
 .neswLow{
   display: flex;
-
 }
 .news_num{
   margin: 10rpx 0;
   margin-left: 30rpx;
 }
-
-
 .color-red {
   color: red;
 }
@@ -159,19 +145,19 @@ font-size: 18px;
 
 .news-item {
   align-items: center;
-  margin: 4px 0; /* 减小了条目间的外边距 */
-  padding: 4px; /* 调整内边距看看效果 */
+  margin: 3px 0; /* 减小了条目间的外边距 */
+  padding: 1px; /* 调整内边距看看效果 */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .news-box {
-  background-color: #eeebe7;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 5px; /* 减小整体内边距 */
-  margin: 5px; /* 减小外边距 */
+  padding: 2px; /* 减小整体内边距 */
+  margin: 2px; /* 减小外边距 */
 }
 
 
@@ -194,11 +180,10 @@ font-size: 18px;
 /* 头像样式 */
 .avatar {
   width: 30px; /* 设置头像宽度 */
-  height: 30px; /* 设置头像高度，保持与宽度一致形成正圆 */
-  border-radius: 50%; /* 圆角半径为50%，生成圆形 */
-  overflow: hidden; /* 隐藏超出圆形区域的部分 */
+  height: 30px; /* 设置头像高度 */
+  border-radius: 50%; 
+  overflow: hidden; 
 }
-
 
 .TitleTime {
   font-size: 20px; /* 调整字体大小为20像素 */

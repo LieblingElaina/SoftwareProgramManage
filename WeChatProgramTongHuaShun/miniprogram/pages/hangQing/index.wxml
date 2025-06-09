@@ -33,8 +33,6 @@
         <view>{{szdata.increPer}}</view>
       </view>
     </navigator>
-
-
     <navigator url="../body/index?id=sz399006" class="box1">
       <view class="text1">创业板指</view>
       <view class="text2">1783.83</view>
@@ -44,14 +42,42 @@
       </view>
     </navigator>
   </view>
+
+  <van-cell>
+    <view slot="title">
+      <view style="font-size: 18px; font-weight: 500; margin-left: -20px;">今日板块</view>
+    </view>
+  </van-cell>
+  <scroll-view scroll-x="true" style="width:100%;white-space: nowrap">
+    <view class="boxx">
+      <view class="boxtag">热门个股</view>
+      <view class="box11">
+        <view><view class="text11">圣诺生物</view><view class="num">17.58%</view></view>
+        <view><view class="text11">国光电气</view><view class="num">16.36%</view></view>
+        <view><view class="text11">信宇人</view><view class="num">12.40%</view></view>
+        <view><view class="text111">金陵体育</view><view class="num">15.31%</view></view>
+        <view><view class="text111">海辰药业</view><view class="num">19.99%</view></view>
+        <view><view class="text111">跨境通</view><view class="num">10.07%</view></view>
+      </view>
+      <view class="box22">
+        <view><view class="text111">南华期货</view><view class="num">10.01%</view></view>
+        <view><view class="text111">菲利格尔</view><view class="num">9.97%</view></view>
+        <view><view class="text111">交大昂立</view><view class="num">10.06%</view></view>
+        <view><view class="text111">仁智股份</view><view class="num">9.95%</view></view>
+        <view><view class="text111">英洛华</view><view class="num">9.99%</view></view>
+        <view><view class="text111">万邦德</view><view class="num">6.87%</view></view>
+      </view>
+    </view>
+  </scroll-view>
+
   <view class="news-box" style="height:{{ isCollapse?(news.length*55+50)+'rpx':'50rpx'}};transition: height 0.5s;overflow: hidden;">
     <view class="news-headline" style="width: 691rpx; height: 60rpx; box-sizing: border-box">
       <swiper class="news-text" style="height: 50rpx; flex: 1;" autoplay interval="3000" circular>
-        <swiper-item class="news-text-List" wx:for="{{news}}" wx:key="index" catch:touchmove="stopTouchMove" style="width: 100%; height: 98rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
-          <view class="content" style="width: 691rpx; height: 51rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 8rpx">{{item.title}}</view>
+        <swiper-item class="news-text-List" wx:for="{{news}}" wx:key="index" catch:touchmove="stopTouchMove" style="width: 100%; height: 98rpx;">
+          <view class="content" style="width: 691rpx; height: 51rpx; top: 8rpx">{{item.title}}</view>
         </swiper-item>
       </swiper>
-      <view bind:tap="changeCollapse" style="color: gray; font-size: small; transform: rotate({{isCollapse?'0deg':'180deg'}}); width: fit-content; height: 30rpx; display: block; box-sizing: border-box; margin-right: 16rpx;">^</view>
+      <view bind:tap="changeCollapse" style="color: gray; font-size: small; transform: rotate({{isCollapse?'0deg':'180deg'}}); margin-right: 16rpx;">^</view>
     </view>
     <navigator url="../web/index?url={{item.url}}" class="news-item" wx:for="{{news}}" wx:key="index">
       <text style="margin-right: 16rpx; font-weight: bold;">{{index+1}}</text>
@@ -59,89 +85,16 @@
     </navigator>
   </view>
 
-
-
-  <van-cell value="查看全部板块">
-    <view slot="title">
-      <view style="font-size: 18px; font-weight: 700;">今日板块</view>
-    </view>
-  </van-cell>
-  <scroll-view scroll-x="true" style="width:100%;white-space: nowrap">
-
-    <view class="boxx">
-      <view class="boxtag">热门概念</view>
-      <view class="box11">
-        <view>
-          <view class="text11">细胞免疫治疗</view>
-          <view class="num">4.32%</view>
-        </view>
-        <view>
-          <view class="text11">阿尔茨海默概念</view>
-          <view class="num">1.69%</view>
-        </view>
-        <view>
-          <view class="text11">合成生物</view>
-          <view class="num">1.62%</view>
-        </view>
-      </view>
-      <view class="box22">
-        <view>
-          <view class="text222">泰林生物</view>
-          <view class="num">20.01%</view>
-        </view>
-        <view>
-          <view class="text222">鲁抗医药</view>
-          <view class="num">10.05%</view>
-        </view>
-        <view>
-          <view class="text222">瑞丰高材</view>
-          <view class="num">20.00%</view>
-        </view>
-      </view>
-    </view>
-
-    <view class="boxx">
-      <view class="boxtag">热门概念</view>
-      <view class="box11">
-        <view>
-          <view class="text11">细胞免疫治疗</view>
-          <view class="num">4.32%</view>
-        </view>
-        <view>
-          <view class="text11">阿尔茨海默概念</view>
-          <view class="num">1.69%</view>
-        </view>
-        <view>
-          <view class="text11">合成生物</view>
-          <view class="num">1.62%</view>
-        </view>
-      </view>
-      <view class="box22">
-        <view>
-          <view class="text222">泰林生物</view>
-          <view class="num">20.01%</view>
-        </view>
-        <view>
-          <view class="text222">鲁抗医药</view>
-          <view class="num">10.05%</view>
-        </view>
-        <view>
-          <view class="text222">瑞丰高材</view>
-          <view class="num">20.00%</view>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
   <van-cell>
     <view slot="title">
-      <view style="font-size: 18px; font-weight: 700;">股票排行</view>
+      <view style="font-size: 18px; font-weight: 500; margin-left: -20px;">股票排行</view>
     </view>
   </van-cell>
   <van-tabs active="{{ active }}">
     <van-tab title="涨幅榜">
       <view>
         <view class="text">
-          <view style="width: 350rpx; position: relative; left: 23rpx; top: 0rpx">股票名称</view>
+          <view style="width: 350rpx;">股票名称</view>
           <view style="width: 150rpx;text-align: center">最新价</view>
           <view style="width: 150rpx;text-align: center">涨跌幅</view>
           <view style="width: 150rpx;text-align: center">涨速</view>
@@ -158,9 +111,7 @@
             <view style="width: 150rpx;text-align: center; font-weight: 700;" class="{{item.displayPercentage > 0 ? 'color-red' : 'color-green'}}">
               {{item.displayPercentage}}%
             </view>
-
           </view>
-
           <view wx:else class="list" bind:tap="toTap" data-actionid="{{item.symbol}}">
             <view class="top2" style="width: 350rpx;">
               <view>{{item.name}}</view>
