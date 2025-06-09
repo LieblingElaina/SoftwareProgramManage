@@ -15,7 +15,7 @@ Page({
     wx.request({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
-        key: '3f69554c6e2fbe6e7e01d88d49fbe67e',
+        key: '47ed3bcd6a915ca332d9ae6a7476673b',
         gid: this.data.value
       },
       method: 'GET',

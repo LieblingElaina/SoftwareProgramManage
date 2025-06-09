@@ -1,7 +1,9 @@
 const cloud = require('wx-server-sdk')
 const request = require('request');
 
-cloud.init({ env: cloud.DYNAMIC_CURRENT_ENV }) // 使用当前云环境
+cloud.init({
+    env: 'cloud1-2g44zeqaf2265de9'
+  }) // 使用当前云环境
 const db = cloud.database()
 const users = db.collection('user')
 

@@ -89,7 +89,7 @@ Page({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
         gid: this.data.id,
-        key: 'a905112d2213e4d9f822886e3bdd60a8'
+        key: '47ed3bcd6a915ca332d9ae6a7476673b'
       },
       method: 'GET',
       header: {
@@ -148,29 +148,44 @@ Page({
    */
   onShow() {},
 
-  requestNews(){
-    if (!this.data.hasMoreNews) return
-    let url = `https://eq.10jqka.com.cn/wechatApplication/listv4/hs/${this.data.id.substr(2)}_${this.data.currentPage+1}.json`
-    console.log(url)
+  requestNews() {
+    if (!this.data.hasMoreNews) return;
+  
+    const nextPage = this.data.currentPage + 1;
+    const symbol = this.data.id.toLowerCase(); // sz600021 或 sh600000
+    const url = `https://proxy.finance.qq.com/ifzqgtimg/appstock/news/info/search.php?symbol=${symbol}&page=${nextPage}&num=10`;
+  
+    console.log("Requesting news from:", url);
     wx.request({
       url: url,
-      success: (res)=>{
-        // console.log(res)
-        if (res.data.code === "200"){
-          let _news = this.data.news
-          _news.push(...(res.data.data.pageItems.map(it => {
-            it.time = util.formatTimestamp(it.ctime*1000)
-            return it
-          })))
+      success: (res) => {
+        console.log("新浪新闻返回：", res.data);
+        if (res.data.resultcode === "200" && res.data.result.length > 0) {
+          const newsList = res.data.result[0].data || [];
+  
+          const formattedNews = newsList.map(item => ({
+            title: item.title,
+            url: item.url,
+            source: item.source,
+            time: item.time
+          }));
+  
           this.setData({
-            news: _news,
-            hasMoreNews: res.data.data.hasMore === "1",
-            currentPage: res.data.data.currentPage
-          })
+            news: [...this.data.news, ...formattedNews],
+            currentPage: nextPage,
+            hasMoreNews: newsList.length === 10 // 每页10条，返回满10条说明可能还有
+          });
+        } else {
+          this.setData({ hasMoreNews: false });
         }
+      },
+      fail: (err) => {
+        console.error("新浪新闻请求失败", err);
       }
-    })
+    });
   },
+  
+  
   onReachBottom() {
     this.requestNews(); // 当用户滑到页面底部时，加载更多新闻
   },

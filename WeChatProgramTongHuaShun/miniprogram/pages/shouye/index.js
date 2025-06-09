@@ -11,7 +11,7 @@ Page({
   },
 
   loadInitialStocks: function () {
-    const key = "3f69554c6e2fbe6e7e01d88d49fbe67e"; // 确保使用有效的APPKEY
+    const key = "47ed3bcd6a915ca332d9ae6a7476673b"; // 确保使用有效的APPKEY
     Promise.all([
       api.fetchStocks('http://web.juhe.cn/finance/stock/szall?key=' + key), // 深圳股市
       api.fetchStocks('http://web.juhe.cn/finance/stock/shall?key=' + key) // 上海股市

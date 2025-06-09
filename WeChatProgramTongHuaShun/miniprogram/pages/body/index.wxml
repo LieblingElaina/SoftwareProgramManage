@@ -41,7 +41,7 @@
     <view class="up_box">
       <view>
         <view>卖号</view>
-        <view>卖价</view>
+        <view>卖入</view>
         <view style="color: red;font-weight: 700;">报价</view>
       </view>
       <view>
@@ -73,7 +73,7 @@
     <view class="down_box">
       <view>
         <view>买号</view>
-        <view>买价</view>
+        <view>买入</view>
         <view style="color: red;font-weight: 700;">报价</view>
       </view>
       <view>
@@ -113,13 +113,13 @@
   </van-cell>
 
   <view style="padding-bottom: 100px ;" class="news_box">
-    <!-- <view>
-      <view class="news_text">农业银行超800亿元大红包今日发放！银行ETF（512800）逆市走强，“避风港”属性尽显</view>
-      <view class="bottom_text"><span>新浪基金</span><span></span>11:02</view>
+    <view>
+      <view class="news_text">6月信心指数回归50荣枯线以上，经济学家准确预测CPI数据丨第一财经首席经济学家调研</view>
+      <view class="bottom_text"><span>第一财经</span><span></span>2025年06月09日 17:42</view>
     </view>
     <view>
-      <view class="news_text">半导体ETF（512480）冲高回落，机构：多种迹象表明半导体行业周期即将反转</view>
-      <view class="bottom_text"><span>新浪基金</span><span></span>10:54 </view>
+      <view class="news_text">腾讯音乐申请一种音质增强模型训练等相关专利 ，提高音质增强模型的音质增强效果</view>
+      <view class="bottom_text"><span>金融界网站</span><span></span>2025年06月09日 17:36</view>
     </view>
     <view>
       <view class="news_text">广东大动作!加快智能算力基础设施建设!顶层政策推动,特别国债提供资金活水,信创ETF基金(562030)盘中上探1%</view>
@@ -132,7 +132,7 @@
     <view>
       <view class="news_text">中东富豪扫货中国股票资产，什么信号？</view>
       <view class="bottom_text"><span>新浪基金</span><span></span>15:32</view>
-    </view> -->
+    </view>
 
     
     <navigator style="padding: 0 32rpx;" url="../web/index?url={{item.url}}" wx:for="{{news}}" wx:key="ctime">
