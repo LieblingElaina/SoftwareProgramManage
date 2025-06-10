@@ -24,7 +24,7 @@ Page({
             console.log(res)
             if (res.result.success) {
               wx.setStorageSync('phone', this.data.phone)
-              wx.setStorageSync('avatarUrl', 'cloud://cloud1-2g35m8fhe6af2f25.636c-cloud1-2g35m8fhe6af2f25-1325733992/touxiang.jpg')
+              wx.setStorageSync('avatarUrl', 'https://assets-prd.ignimgs.com/2021/08/19/elder-scrolls-skyrim-button-2017-1629409446732.jpg')
               wx.setStorageSync('login', '1')
               wx.showToast({
                 title:"登录成功",

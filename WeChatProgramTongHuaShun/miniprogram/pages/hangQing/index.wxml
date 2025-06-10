@@ -7,7 +7,6 @@
     </view>
   </view>
 
-
 </van-popup>
 <van-nav-bar title="同花顺模拟炒股" bind:click-left="onClickLeft">
   <van-icon wx:if="{{show}}" class="avatar" name="https://b.yzcdn.cn/vant/icon-demo-1126.png" size="30px" slot="left" />
