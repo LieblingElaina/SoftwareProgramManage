@@ -3,13 +3,9 @@ const db = wx.cloud.database();
 import Toast from '@vant/weapp/toast/toast';
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     value: '',
     collect: []
-
   },
   onClick() {
     wx.request({
@@ -42,9 +38,7 @@ Page({
       url: '../body/index?id=' + id,
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad(options) {
     let phone = wx.getStorageSync('phone')
     db.collection("adddata").where({

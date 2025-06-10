@@ -1,6 +1,7 @@
 .bigbox{
   margin: 6px 12px;
 }
+  
 .list{
   display: flex;
   margin: 10px 10px;
@@ -22,8 +23,7 @@
 }
 .box{
   width: 32%;
-  background-color: rgb(242,97,23);
-  border-radius: 10px;
+  background-color: rgb(255,222,173);
   color: white;
   height: 15vh;
 }

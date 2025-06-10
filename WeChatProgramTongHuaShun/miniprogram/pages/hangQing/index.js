@@ -1,9 +1,6 @@
 // pages/hangQing/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     shdata: {},
     szdata: {},
@@ -30,9 +27,6 @@ Page({
       url: '../body/index?id=' + id,
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
  
   onLoad(options) {
     this.requestNews(),
@@ -150,7 +144,6 @@ Page({
       }
     });
 
-
   },
   onClose() {
     this.setData({
@@ -171,7 +164,6 @@ Page({
         avatarUrl: avatarUrl,
         phone: phone,
         show:false
-
       })
       console.log("我进来了");
     }
@@ -193,11 +185,6 @@ Page({
     })
 
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-  },
   getTime(){
     wx.request({
       url:"https://eq.10jqka.com.cn/wechatApplication/search/searchIndex",
@@ -208,12 +195,6 @@ Page({
        })
       }
     });
-  },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-this.setData()
   },
 showData(){
   const logincode = wx.getStorageSync('login')
@@ -227,40 +208,7 @@ showData(){
     })
   }
 },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  },
   requestNews(){
     wx.request({
       url: 'https://news.10jqka.com.cn/tapp/news/headline/ths',

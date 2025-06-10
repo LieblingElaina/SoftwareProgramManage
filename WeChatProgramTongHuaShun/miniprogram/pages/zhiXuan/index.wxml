@@ -3,9 +3,6 @@
   <text>输入股票或股票代码</text>
 </view>
 
-<!-- 提示信息 -->
-<view style="font-size: 12px; margin: 0 10px;">目前仅展示沪深A股，更多自选请到APP中查看</view>
-
 <!-- 股票列表标题 -->
 <view class="text">
   <view style="width: 350rpx; position: relative; left: 28rpx; top: 0rpx">股票名称</view>

@@ -58,11 +58,11 @@
   .qwe{
     border-radius:60px;
     width: 200rpx;
-    height: 7vh;
-    line-height: 7vh;
+    height: 5vh;
+    line-height: 5vh;
     margin: auto ;
     color: white;
-    background: linear-gradient(to right, rgb(240, 74, 8), rgb(216,74,54)); 
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 0)); 
   
   }
   

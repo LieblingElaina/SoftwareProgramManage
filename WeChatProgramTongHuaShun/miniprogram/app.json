@@ -4,7 +4,6 @@
     "pages/zhiXuan/index",
     "pages/body/index",
     "pages/login/index",
-    "pages/shouye/index",
     "pages/web/index",
     "pages/searchResult/index"
   ],
@@ -35,12 +34,6 @@
   "tabBar": {
     "selectedColor": "Ff0000",
     "list": [
-      {
-        "pagePath": "pages/shouye/index",
-        "text": "首页",
-        "iconPath": "./images/icons/首页1.png",
-        "selectedIconPath": "./images/icons/首页1-1.png"
-      }, 
       {
         "pagePath": "pages/hangQing/index",
         "text": "行情",
