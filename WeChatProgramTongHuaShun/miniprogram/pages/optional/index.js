@@ -1,4 +1,3 @@
-// pages/zhiXuan/index.js
 const db = wx.cloud.database();
 import Toast from '@vant/weapp/toast/toast';
 Page({

@@ -43,6 +43,7 @@ Page({
     Toast(event.detail.name);
     this.onClose();
   },
+
   showTap1() {
     let phone = wx.getStorageSync('phone')
     db.collection('adddata').where({
@@ -55,6 +56,7 @@ Page({
       show: false
     })
   },
+
   showTap2() {
     let phone = wx.getStorageSync('phone')
     const db = wx.cloud.database()
@@ -71,7 +73,6 @@ Page({
     this.setData({
       show: true
     })
-
   },
 
   onLoad(options) {
@@ -104,9 +105,6 @@ Page({
     });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady() {
     let phone = wx.getStorageSync('phone')
     if (!phone) return
@@ -129,11 +127,6 @@ Page({
       console.log("错误");
     })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {},
 
   requestNews() {
     if (!this.data.hasMoreNews) return;
@@ -171,6 +164,7 @@ Page({
       }
     });
   },
+
   onReachBottom() {
     this.requestNews(); // 当用户滑到页面底部时，加载更多新闻
   },
@@ -180,9 +174,7 @@ Page({
     wx.stopPullDownRefresh(); // 停止下拉刷新动画
   },
 
-
   onShareAppMessage() {
-    // console.log("用户分享")
     return {
       title:"同花顺("+this.data.id+")",
       path: `/pages/body/index?id=${this.data.id}`

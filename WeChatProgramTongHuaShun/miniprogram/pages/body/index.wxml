@@ -1,4 +1,5 @@
 <wxs module="format" src="./index.wxs"></wxs>
+
 <view class="box">
   <view>
     <view class="bigtext">{{list.nowPri}}</view>
@@ -20,7 +21,9 @@
     <view>额<text class="text4">{{format.roundToTwoDecimalPlaces(list.traAmount)}}万</text></view>
   </view>
 </view>
+
 <view class="main-container">
+
   <van-tabs active="{{ active }}" bind:change="onChange">
     <van-tab title="分时">
       <image src="{{gif.minurl}}" style="width: 100%; " />
@@ -35,9 +38,8 @@
       <image src="{{gif.monthurl}}" style="width: 100%; " />
     </van-tab>
   </van-tabs>
-  <!--  -->
-  <view class="bodybox">
 
+  <view class="bodybox">
     <view class="up_box">
       <view>
         <view>卖号</view>
@@ -70,6 +72,7 @@
         <view style="color: red;font-weight: 700;">{{list.sellFivePri}}</view>
       </view>
     </view>
+
     <view class="down_box">
       <view>
         <view>买号</view>
@@ -102,10 +105,12 @@
         <view style="color: red;font-weight: 700;">{{list.buyFivePri}}</view>
       </view>
     </view>
+
   </view>
 </view>
 
 <van-cell-group inset>
+
   <van-cell>
     <view slot="title">
       <view style="font-size: 18px; font-weight: 500; margin-left: -5px;">新闻</view>
@@ -134,7 +139,6 @@
       <view class="bottom_text"><span>新浪基金</span><span></span>15:32</view>
     </view>
 
-    
     <navigator style="padding: 0 32rpx;" url="../web/index?url={{item.url}}" wx:for="{{news}}" wx:key="ctime">
       <view style="font-size: small; margin-top: 32rpx;">{{item.title}}</view>
       <view style="display: flex; margin-top: 20rpx; color: gray;">
@@ -150,7 +154,6 @@
 
 
 <view class="btn">
-  <button class="qwe">交易</button>
   <view class="icon" wx:if="{{show}}" bindtap="showTap1">
     <image style="width:30px;height: 30px;" src="../../images/icons/favorite1.png" />
     <view style="color: red;">自选</view>
@@ -167,5 +170,5 @@
   </view>
 </view>
 <van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onSelect" bind:close="onClose" />
-<!-- index.wxml -->
+
 

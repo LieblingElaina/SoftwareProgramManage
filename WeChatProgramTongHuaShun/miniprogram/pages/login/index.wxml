@@ -1,6 +1,3 @@
-<!-- <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-  <image src="{{avatarUrl}}"></image>
-</button>  -->
 <van-cell-group>
   <van-field bind:input="btn"  error-message="{{text}}" model:value="{{ phone }}" label="手机号" placeholder="请输入手机号" border="{{ false }}" />
 </van-cell-group>
@@ -15,5 +12,4 @@
 <van-button wx:else disabled block round color="#ffb3b3">
   登录
 </van-button>
-
 </view>

@@ -33,9 +33,9 @@
   align-items: center;
   margin: 10px;
   padding: 10px;
-  background-color: #fff; /* Assuming a white background */
-  border: 1px solid #e1e1e1; /* Light grey border */
-  border-radius: 5px; /* Rounded corners for aesthetics */
+  background-color: #fff; 
+  border: 1px solid #e1e1e1; 
+  border-radius: 5px; 
 }
 
 .text {
@@ -47,7 +47,7 @@
 
 .name-box {
   flex: 1;
-  margin-right: 10px; /* Adds space between name and price */
+  margin-right: 10px; 
 }
 
 .mini {
@@ -58,15 +58,15 @@
 .top {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ensures it takes up full width of the container */
+  flex: 1; 
 }
 
 .red {
-  color: red; /* For positive gains */
+  color: red; 
 }
 
 .green {
-  color: green; /* For negative gains */
+  color: green; 
 }
 .search-trigger {
   padding: 10px;

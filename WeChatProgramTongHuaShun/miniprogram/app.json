@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/hangQing/index",
-    "pages/zhiXuan/index",
+    "pages/market/index",
+    "pages/optional/index",
     "pages/body/index",
     "pages/login/index",
     "pages/web/index",
@@ -35,13 +35,13 @@
     "selectedColor": "Ff0000",
     "list": [
       {
-        "pagePath": "pages/hangQing/index",
+        "pagePath": "pages/market/index",
         "text": "行情",
         "iconPath": "./images/icons/Market.png",
         "selectedIconPath": "./images/icons/Market1.png"
       },
       {
-        "pagePath": "pages/zhiXuan/index",
+        "pagePath": "pages/optional/index",
         "text": "自选",
         "iconPath": "./images/icons/Optional.png",
         "selectedIconPath": "./images/icons/Optional1.png"

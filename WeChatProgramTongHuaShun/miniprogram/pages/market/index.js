@@ -1,6 +1,4 @@
-// pages/hangQing/index.js
 Page({
-
   data: {
     shdata: {},
     szdata: {},
@@ -13,15 +11,17 @@ Page({
     avatarUrl: '',
     showNews:true,
     isAscending: true,
-    news: [],      // 存储新闻数据
+    news: [],
     isCollapse: true  
   },
+
   newsShow(){
     this.setData({
       showNews:!this.data.showNews
     })
   },
-  toTap(e) {
+
+ toTap(e) {
     var id = e.currentTarget.dataset.actionid
     console.log(id)
     wx.navigateTo({
@@ -203,9 +203,9 @@ Page({
       show: true,
       showBlock:false
     })
-
   },
-  getTime(){
+
+ getTime(){
     wx.request({
       url:"https://eq.10jqka.com.cn/wechatApplication/search/searchIndex",
       success:(res)=>{
@@ -216,33 +216,34 @@ Page({
       }
     });
   },
-showData(){
-  const logincode = wx.getStorageSync('login')
-  if (logincode == 1) {
-    const avatarUrl = wx.getStorageSync('avatarUrl')
-    const phone = wx.getStorageSync('phone')
-    this.setData({
-      avatarUrl: avatarUrl,
-      phone: phone,
-      show:false
-    })
-  }
-},
 
-  requestNews(){
+ showData(){
+   const logincode = wx.getStorageSync('login')
+   if (logincode == 1) {
+     const avatarUrl = wx.getStorageSync('avatarUrl')
+     const phone = wx.getStorageSync('phone')
+     this.setData({
+       avatarUrl: avatarUrl,
+       phone: phone,
+       show:false
+     })
+   }
+ },
+
+ requestNews(){
     wx.request({
       url: 'https://news.10jqka.com.cn/tapp/news/headline/ths',
       success: (res) => {
-        // console.log(res)
         if(res.data.code === 200) {
-          let _data = res.data.data.filter(it => it.type === 1)
-          this.setData({
-            news: _data
-          })
+           let _data = res.data.data.filter(it => it.type === 1)
+           this.setData({
+             news: _data
+           })
         }
       }
     })
-  },
+ },
+
   changeCollapse: function() {
     this.setData({
       isCollapse: !this.data.isCollapse

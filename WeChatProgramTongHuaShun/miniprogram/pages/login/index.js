@@ -1,6 +1,5 @@
 // pages/login/index.js
 Page({
-
   data: {
     phone: '',
     button: false,
@@ -38,9 +37,6 @@ Page({
         })
       }
     })
-    // wx.switchTab({
-    //   url: '/pages/hangQing/index'
-    // })
   },
   onChooseAvatar(e) {
     console.log(e);
@@ -58,7 +54,6 @@ Page({
     })
   },
   btn() {
-    // var reg = new RegExp(pattern, flags);
     var reg = /^(13[0-9]|14[579]|15[0-35-9]|166|17[01345678]|18[0-9]|19[89])\d{8}$/
     if (reg.test(this.data.phone)) {
       this.setData({
