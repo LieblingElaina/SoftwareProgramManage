@@ -1,5 +1,6 @@
 const db = wx.cloud.database();
 const util = require('../../utils/util');
+import Toast from '@vant/weapp/toast/toast';
 Page({
   data: {
     gif: {},
@@ -13,23 +14,14 @@ Page({
         openType: 'share'
       },
       {
-        name: '微博',
-        icon: 'weibo'
-      },
-      {
         name: '复制链接',
         icon: 'link'
       },
       {
-        name: '分享海报',
-        icon: 'poster'
-      },
-      {
-        name: '二维码',
+        name: '二维码分享',
         icon: 'qrcode'
       },
     ],
-
     news: [],
     hasMoreNews: true,
     currentPage: 0,
@@ -110,11 +102,6 @@ Page({
         console.error(error);
       }
     });
-
-
-
-
-
   },
 
   /**
@@ -184,8 +171,6 @@ Page({
       }
     });
   },
-  
-  
   onReachBottom() {
     this.requestNews(); // 当用户滑到页面底部时，加载更多新闻
   },

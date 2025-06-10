@@ -37,14 +37,14 @@
       {
         "pagePath": "pages/hangQing/index",
         "text": "行情",
-        "iconPath": "./images/icons/行情2.png",
-        "selectedIconPath": "./images/icons/行情2-2.png"
+        "iconPath": "./images/icons/Market.png",
+        "selectedIconPath": "./images/icons/Market1.png"
       },
       {
         "pagePath": "pages/zhiXuan/index",
         "text": "自选",
-        "iconPath": "./images/icons/自选3.png",
-        "selectedIconPath": "./images/icons/自选3-3.png"
+        "iconPath": "./images/icons/Optional.png",
+        "selectedIconPath": "./images/icons/Optional1.png"
       }
     ]
   },

@@ -4,6 +4,7 @@ Page({
   data: {
     shdata: {},
     szdata: {},
+    cydata: {},
     date: '',
     active: 0,
     show: true,
@@ -13,7 +14,7 @@ Page({
     showNews:true,
     isAscending: true,
     news: [],      // 存储新闻数据
-    isCollapse: true  // 控制新闻详情的展开和折叠
+    isCollapse: true  
   },
   newsShow(){
     this.setData({
@@ -67,7 +68,7 @@ Page({
             list: sortedRiseList,
             fallList: sortedFallList,
             volumeList: sortedVolumeList,
-            speedList: sortedSpeedList  // 新增涨速榜数据
+            speedList: sortedSpeedList
           });
         }
       },
@@ -99,8 +100,8 @@ Page({
     this.setData({
       date: formattedDate
     })
-    console.log(formattedDate); // 输出类似：2024年06月03日 五
-    // 上海股票
+    console.log(formattedDate); 
+    //上证指数
     wx.request({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
@@ -121,8 +122,7 @@ Page({
         console.error(error);
       }
     });
-
-    // 深圳股票
+    //深证指数
     wx.request({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
@@ -142,8 +142,28 @@ Page({
       fail: function (error) {
         console.error(error);
       }
-    });
-
+    })
+    //创业板指
+    wx.request({
+        url: 'http://web.juhe.cn/finance/stock/hs',
+        data: {
+          key: '47ed3bcd6a915ca332d9ae6a7476673b',
+          gid: 'sz399006'
+        },
+        method: 'GET',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: (res) => {
+          console.log(res.data);
+          this.setData({
+            cydata: res.data.result
+          })
+        },
+        fail: function (error) {
+          console.error(error);
+        }
+      })
   },
   onClose() {
     this.setData({
@@ -189,9 +209,9 @@ Page({
     wx.request({
       url:"https://eq.10jqka.com.cn/wechatApplication/search/searchIndex",
       success:(res)=>{
-       let TitleTime=res.data.result.jyr.split(',')[0]
+       let Time=res.data.result.jyr.split(',')[0]
        this.setData({
-         TitleTime
+         Time
        })
       }
     });

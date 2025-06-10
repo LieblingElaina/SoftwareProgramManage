@@ -14,10 +14,8 @@
 
 </van-nav-bar>
 <view class="bigbox"> 
-  <view class="TitleTime">{{TitleTime}}</view>
   <view class="date">{{date}}</view>
   <view class="top">
-
     <navigator url="../body/index?id=sh000001" class="box">
   <view class="text1">上证指数</view>
   <view class="text2" style="color: {{shdata.increase >= 0 ? 'red' : 'green'}};">{{shdata.nowpri}}</view>
@@ -38,10 +36,10 @@
 
 <navigator url="../body/index?id=sz399006" class="box">
   <view class="text1">创业板指</view>
-  <view class="text2" style="color: {{szdata.increase >= 0 ? 'red' : 'green'}};">{{szdata.nowpri}}</view>
+  <view class="text2" style="color: {{-1.17 >= 0 ? 'red' : 'green'}};">{{2037.27}}</view>
   <view class="text3">
-    <view style="color: {{szdata.increase >= 0 ? 'red' : 'green'}};">{{szdata.increase}}</view>
-    <view style="color: {{szdata.increase >= 0 ? 'red' : 'green'}};">{{szdata.increPer}}</view>
+    <view style="color: {{-1.17 >= 0 ? 'red' : 'green'}};">{{-24.02}}</view>
+    <view style="color: {{-1.17 >= 0 ? 'red' : 'green'}};">{{-1.17}}</view>
   </view>
 </navigator>
 

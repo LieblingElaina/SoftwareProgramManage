@@ -1,6 +1,6 @@
 <!-- 搜索栏，现在作为一个触发跳转的按钮 -->
 <view class="search-bar" bindtap="goToSearchPage">
-  <text>输入股票或股票代码</text>
+  <text>输入股票信息以搜索</text>
 </view>
 
 <!-- 股票列表标题 -->

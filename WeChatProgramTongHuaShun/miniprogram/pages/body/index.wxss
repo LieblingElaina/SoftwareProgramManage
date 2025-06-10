@@ -93,7 +93,7 @@
   .up_box, .down_box {
     display: flex;
     flex-direction: column; /* 设置为列布局 */
-    width: 100%; /* 占满父容器的宽度 */
+    width: 90%; /* 占满父容器的宽度 */
     font-size: 12px;
   }
   
@@ -106,10 +106,6 @@
   .news_text{
     margin: 0 25rpx;
     font-size: 14px;
-    /* text-align: left; */
-    /* display: block; */
-    /* text-overflow: ellipsis; */
-    /* word-wrap: break-all; */
     word-break: break-all;
   }
   

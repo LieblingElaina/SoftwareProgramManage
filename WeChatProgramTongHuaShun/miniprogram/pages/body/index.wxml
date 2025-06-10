@@ -42,7 +42,7 @@
       <view>
         <view>卖号</view>
         <view>卖入</view>
-        <view style="color: red;font-weight: 700;">报价</view>
+        <view>价格</view>
       </view>
       <view>
         <view>卖1</view>
@@ -74,7 +74,7 @@
       <view>
         <view>买号</view>
         <view>买入</view>
-        <view style="color: red;font-weight: 700;">报价</view>
+        <view>价格</view>
       </view>
       <view>
         <view>买1</view>
@@ -108,7 +108,7 @@
 <van-cell-group inset>
   <van-cell>
     <view slot="title">
-      <view style="font-size: 18px; font-weight: 700;">新闻</view>
+      <view style="font-size: 18px; font-weight: 500; margin-left: -5px;">新闻</view>
     </view>
   </van-cell>
 
@@ -152,17 +152,20 @@
 <view class="btn">
   <button class="qwe">交易</button>
   <view class="icon" wx:if="{{show}}" bindtap="showTap1">
-    <image style="width:30px;height: 30px;" src="../../images/icons/收藏-选中.png" />
+    <image style="width:30px;height: 30px;" src="../../images/icons/favorite1.png" />
     <view style="color: red;">自选</view>
   </view>
   <view class="icon" wx:else bindtap="showTap2">
-    <image style="width:30px;height: 30px;" src="../../images/icons/88.png" />
+    <image style="width:30px;height: 30px;" src="../../images/icons/favorite.png" />
     <view>自选</view>
   </view>
 
+  <van-toast id="van-toast" />
   <view class="icon" bind:tap="onClick">
-    <image style="width:30px;height: 30px;" src="../../images/icons/77.png" />
+    <image style="width:30px;height: 30px;" src="../../images/icons/share.png" />
     <view open-type="share">分享</view>
   </view>
 </view>
 <van-share-sheet show="{{ showShare }}" title="立即分享给好友" options="{{ options }}" bind:select="onSelect" bind:close="onClose" />
+<!-- index.wxml -->
+

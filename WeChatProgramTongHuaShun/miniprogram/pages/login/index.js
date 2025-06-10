@@ -1,9 +1,6 @@
 // pages/login/index.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     phone: '',
     button: false,
@@ -12,12 +9,6 @@ Page({
     validateCode: '',
     codeErrorText: '',
     buttonColor: 'gray'
-  },
-  getCode: function() {
-    // 在获取验证码的逻辑中改变按钮颜色
-    this.setData({
-      buttonColor: this.data.buttonColor === 'gray' ? '#ff5252' : 'gray' // 切换颜色
-    });
   },
   goBlack(){
     wx.login({
@@ -79,57 +70,5 @@ Page({
         text: '号码格式错误'
       })
     }
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
   }
 })
