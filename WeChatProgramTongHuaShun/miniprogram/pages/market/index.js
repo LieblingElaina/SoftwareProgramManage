@@ -36,7 +36,7 @@ Page({
       url: 'http://web.juhe.cn/finance/stock/shall',
       data: {
         stock: 'a',
-        key: '47ed3bcd6a915ca332d9ae6a7476673b'
+        key: '3f69554c6e2fbe6e7e01d88d49fbe67e'
       },
       method: 'GET',
       header: {
@@ -105,7 +105,7 @@ Page({
     wx.request({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
-        key: '47ed3bcd6a915ca332d9ae6a7476673b',
+        key: '3f69554c6e2fbe6e7e01d88d49fbe67e',
         type: 0
       },
       method: 'GET',
@@ -126,7 +126,7 @@ Page({
     wx.request({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
-        key: '47ed3bcd6a915ca332d9ae6a7476673b',
+        key: '3f69554c6e2fbe6e7e01d88d49fbe67e',
         type: 1
       },
       method: 'GET',
@@ -147,7 +147,7 @@ Page({
     wx.request({
         url: 'http://web.juhe.cn/finance/stock/hs',
         data: {
-          key: '47ed3bcd6a915ca332d9ae6a7476673b',
+          key: '3f69554c6e2fbe6e7e01d88d49fbe67e',
           gid: 'sz399006'
         },
         method: 'GET',

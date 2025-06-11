@@ -143,30 +143,33 @@ font-size: 18px;
 }
 
 
-.news-item {
-  align-items: center;
-  margin: 3px 0; /* 减小了条目间的外边距 */
-  padding: 1px; /* 调整内边距看看效果 */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+ .news-item {
+   align-items: center;
+   margin: 3px 0; /* 减小了条目间的外边距 */
+   padding: 1px; /* 调整内边距看看效果 */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+ }
 
-.news-box {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 2px; /* 减小整体内边距 */
-  margin: 2px; /* 减小外边距 */
-}
+ .news-box {
+   overflow: hidden;
+   transition: max-height 0.5s ease;
+ }
 
 
-.news_num {
-  font-size: 16px; /* 数字字体大小 */
-  color: red; /* 数字颜色 */
-  margin-right: 12px; /* 数字和文本之间的间距 */
-}
-
+ .news_num {
+   font-size: 16px; /* 数字字体大小 */
+   color: red; /* 数字颜色 */
+   margin-right: 12px; /* 数字和文本之间的间距 */
+  }
+  .news-box.collapsed {
+    max-height: 50rpx;
+  }
+  
+  .news-box.expanded {
+    max-height: 1000rpx; /* 允许足够高度内容撑开 */
+  }
 .newstext {
   font-size: 14px; /* 文本字体大小 */
   color: #333; /* 文本颜色 */

@@ -82,7 +82,7 @@ Page({
       url: 'http://web.juhe.cn/finance/stock/hs',
       data: {
         gid: this.data.id,
-        key: '47ed3bcd6a915ca332d9ae6a7476673b'
+        key: '3f69554c6e2fbe6e7e01d88d49fbe67e'
       },
       method: 'GET',
       header: {
@@ -128,42 +128,19 @@ Page({
     })
   },
 
-  requestNews() {
-    if (!this.data.hasMoreNews) return;
-  
-    const nextPage = this.data.currentPage + 1;
-    const symbol = this.data.id.toLowerCase(); // sz600021 或 sh600000
-    const url = `https://proxy.finance.qq.com/ifzqgtimg/appstock/news/info/search.php?symbol=${symbol}&page=${nextPage}&num=10`;
-  
-    console.log("Requesting news from:", url);
+  requestNews(){
     wx.request({
-      url: url,
+      url: 'https://news.10jqka.com.cn/tapp/news/headline/ths',
       success: (res) => {
-        console.log("新浪新闻返回：", res.data);
-        if (res.data.resultcode === "200" && res.data.result.length > 0) {
-          const newsList = res.data.result[0].data || [];
-  
-          const formattedNews = newsList.map(item => ({
-            title: item.title,
-            url: item.url,
-            source: item.source,
-            time: item.time
-          }));
-  
-          this.setData({
-            news: [...this.data.news, ...formattedNews],
-            currentPage: nextPage,
-            hasMoreNews: newsList.length === 10 // 每页10条，返回满10条说明可能还有
-          });
-        } else {
-          this.setData({ hasMoreNews: false });
+        if(res.data.code === 200) {
+           let _data = res.data.data.filter(it => it.type === 1)
+           this.setData({
+             news: _data
+           })
         }
-      },
-      fail: (err) => {
-        console.error("新浪新闻请求失败", err);
       }
-    });
-  },
+    })
+ },
 
   onReachBottom() {
     this.requestNews(); // 当用户滑到页面底部时，加载更多新闻

@@ -109,6 +109,50 @@
   margin: 20px 0;
   }
   
+  .news-text{
+    height: 30rpx;
+  }
   
+  .news-headline{
+    display: flex;
+  }
+  
+  
+  .news-item {
+    align-items: center;
+    margin: 3px 0; /* 减小了条目间的外边距 */
+    padding: 1px; /* 调整内边距看看效果 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .news-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2px; /* 减小整体内边距 */
+    margin: 2px; /* 减小外边距 */
+  }
+  
+  
+  .news_num {
+    font-size: 16px; /* 数字字体大小 */
+    color: red; /* 数字颜色 */
+    margin-right: 12px; /* 数字和文本之间的间距 */
+  }
+  
+  .newstext {
+    font-size: 14px; /* 文本字体大小 */
+    color: #333; /* 文本颜色 */
+    flex: 1; /* 让文本占据剩余空间 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 超出部分显示省略号 */
+  }
+  
+  .news-box.expanded {
+    max-height: 1000rpx; /* 允许足够高度内容撑开 */
+  }
   
   
